@@ -1,6 +1,6 @@
 # wrap
 
-A Claude Code / Codex / OpenCode **skill** that consolidates every scattered descriptive markdown file in a project (`README.md`, `AGENTS.md`, `HANDOFF.md`, `docs/*`) into a single canonical `CLAUDE.md` and reconciles it against the current code.
+A **Claude Code plugin** (also installable manually in Codex / OpenCode / etc.) that consolidates every scattered descriptive markdown file in a project (`README.md`, `AGENTS.md`, `HANDOFF.md`, `docs/*`) into a single canonical `CLAUDE.md` and reconciles it against the current code.
 
 After one run, the next session — yours, a teammate's, or a fresh agent's — has exactly one entry point.
 
@@ -18,21 +18,26 @@ Working with AI coding agents tends to produce documentation sprawl: a `HANDOFF.
 
 ## Install
 
-Skills live in `~/.claude/skills/<skill-name>/`. To install `wrap`:
+This repo is a **Claude Code plugin marketplace**. From inside Claude Code:
 
-```bash
-git clone https://github.com/recomby-ai/wrap-skill.git
-mkdir -p ~/.claude/skills/wrap
-cp wrap-skill/SKILL.md ~/.claude/skills/wrap/SKILL.md
+```
+/plugin marketplace add recomby-ai/wrap-skill
+/plugin install wrap@wrap-skill
 ```
 
-Or as a one-liner:
+That's it — no git clone, no manual file copying. To update later, run `/plugin marketplace update wrap-skill`.
+
+<details>
+<summary>Manual install (other agents / no plugin support)</summary>
+
+If you're using an agent that supports `SKILL.md` but not Claude Code's plugin system, copy the file manually:
 
 ```bash
-mkdir -p ~/.claude/skills/wrap && curl -fsSL https://raw.githubusercontent.com/recomby-ai/wrap-skill/main/SKILL.md -o ~/.claude/skills/wrap/SKILL.md
+mkdir -p ~/.claude/skills/wrap && curl -fsSL https://raw.githubusercontent.com/recomby-ai/wrap-skill/main/plugins/wrap/skills/wrap/SKILL.md -o ~/.claude/skills/wrap/SKILL.md
 ```
 
-That's it. Restart your agent and the skill is available.
+Adjust the destination path for Codex / OpenCode / Cursor / Gemini CLI as needed.
+</details>
 
 ## Use
 

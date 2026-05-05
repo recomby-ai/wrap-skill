@@ -1,0 +1,20 @@
+{
+  "name": "wrap-skill",
+  "description": "Single-skill marketplace distributing the wrap skill for project doc consolidation.",
+  "owner": {
+    "name": "recomby-ai"
+  },
+  "plugins": [
+    {
+      "name": "wrap",
+      "source": "./plugins/wrap",
+      "description": "Consolidate scattered project markdown files into a single canonical CLAUDE.md, with a pinned PROGRESS block at the top.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "homepage": "https://github.com/recomby-ai/wrap-skill",
+      "repository": "https://github.com/recomby-ai/wrap-skill",
+      "category": "documentation",
+      "tags": ["documentation", "wrap-up", "claude-md", "handoff", "session"]
+    }
+  ]
+}

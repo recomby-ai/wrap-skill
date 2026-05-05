@@ -1,0 +1,12 @@
+{
+  "name": "wrap",
+  "description": "Consolidate scattered project markdown files into a single canonical CLAUDE.md, with a pinned PROGRESS block at the top.",
+  "version": "1.0.0",
+  "author": {
+    "name": "recomby-ai"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/recomby-ai/wrap-skill",
+  "repository": "https://github.com/recomby-ai/wrap-skill",
+  "keywords": ["documentation", "wrap-up", "claude-md", "handoff", "session"]
+}

@@ -3,3 +3,6 @@
 *.swo
 .vscode/
 .idea/
+
+# Maintainer-only handoff doc — not for public distribution
+CLAUDE.md
