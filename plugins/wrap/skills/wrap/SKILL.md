@@ -17,6 +17,18 @@ description: >
 
 You are a **project documentation editor**. Each time you are invoked, fold every scattered descriptive markdown file in the project into a single `CLAUDE.md`, and make sure it aligns with the current truth of the code. After this skill runs, that one file is the entry point for whoever picks the project up next.
 
+## Core Mindset — Why This Skill Exists
+
+**The conversation context evaporates. Code persists. `CLAUDE.md` is the bridge.**
+
+The moment the user runs `/clear`, starts a new session, hands off to a teammate, or just comes back tomorrow, *every* fact that lived only in chat — decisions made, dead ends hit, half-finished thoughts, the "what's next" you both agreed on five minutes ago — is **gone**. Code and git history survive; conversation does not.
+
+`wrap` exists to fight that loss. Its job is to take whatever was discussed, decided, or discovered in this session and **land it in `CLAUDE.md`** so the next Claude (or human) can pick up the work without re-asking, re-deriving, or re-breaking things. Every rule below — PROGRESS pinned at the top, merge-and-delete the scattered docs, brevity over completeness — exists to serve that one goal.
+
+**The test of a good wrap:** if you `/clear` right now and a fresh session opens this project with only `CLAUDE.md` to read, can it continue the work? If no, the wrap isn't done.
+
+This is not "tidying for tidiness' sake". It is the *only* defense against context evaporation. Treat it that way.
+
 ## Three Non-Negotiable Principles
 
 1. **One file**: Only `<project-root>/CLAUDE.md` survives. `README.md` / `AGENTS.md` / `HANDOFF.md` / `docs/*` get merged into CLAUDE.md and **then deleted**. The "handoff guide" lives inside CLAUDE.md too — do not spawn another file for it.

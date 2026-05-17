@@ -9,7 +9,7 @@
       "name": "wrap",
       "source": "./plugins/wrap",
       "description": "Consolidate scattered project markdown files into a single canonical CLAUDE.md, with a pinned PROGRESS block at the top.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "license": "MIT",
       "homepage": "https://github.com/recomby-ai/wrap-skill",
       "repository": "https://github.com/recomby-ai/wrap-skill",
